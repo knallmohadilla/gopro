@@ -222,7 +222,7 @@ function App() {
           <div key={index}>
             <span style={style}>{game.playerA === "" ? "none" : game.playerA + "(" + game.winsA + ")"}</span>vs.<span style={style}>{game.playerB === "" ? "none" : game.playerB + "(" + game.winsB + ")"}</span>
             <span style={style}>{
-              game.playerA === "" || game.playerB === "" ? <input type='button' onClick={(e) => joinGame(e, game.id)} value="Join"/> : 
+              game.playerA === "" || game.playerB === "" && game.playerB !== input && game.playerA !== input? <input type='button' onClick={(e) => joinGame(e, game.id)} value="Join"/> : 
               game.gameFinished ?
               <input style={style} type='button' onClick={(e) => restartGame(e, game.id)} value="restart"/>
               : <></>
