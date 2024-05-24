@@ -78,8 +78,8 @@ spec:
   type: NodePort
   ports:
     - name: client
-      port: 3000
-      targetPort: 3000
+      port: 30030
+      targetPort: 30030
       protocol: TCP
       nodePort: 30030
 ---

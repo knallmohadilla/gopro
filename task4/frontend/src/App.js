@@ -69,8 +69,6 @@ function App() {
   const [input, setInput] = useState(players[Math.floor(Math.random() * players.length)]);
   const [userChoice, setUserChoice] = useState('');
   const ip = "http://" + window.location.href.split("//")[1].split("/")[0].split(':')[0];
-  console.log(ip);
-
   
   useEffect(() => {
     if(ip) {
