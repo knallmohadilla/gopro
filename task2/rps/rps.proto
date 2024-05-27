@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package task2;
+package rps;
 
-option go_package = "./task2";
+option go_package = "./rps";
 
 service GameService {
     rpc createGame(GameRequest) returns (GameResponse) {}

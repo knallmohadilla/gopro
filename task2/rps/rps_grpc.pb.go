@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.12.4
-// source: proto/task2.proto
+// source: rps.proto
 
-package task2
+package rps
 
 import (
 	context "context"
@@ -36,7 +36,7 @@ func NewGameServiceClient(cc grpc.ClientConnInterface) GameServiceClient {
 
 func (c *gameServiceClient) CreateGame(ctx context.Context, in *GameRequest, opts ...grpc.CallOption) (*GameResponse, error) {
 	out := new(GameResponse)
-	err := c.cc.Invoke(ctx, "/task2.GameService/createGame", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/rps.GameService/createGame", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,7 +45,7 @@ func (c *gameServiceClient) CreateGame(ctx context.Context, in *GameRequest, opt
 
 func (c *gameServiceClient) GetGames(ctx context.Context, in *Void, opts ...grpc.CallOption) (*GamesResponse, error) {
 	out := new(GamesResponse)
-	err := c.cc.Invoke(ctx, "/task2.GameService/getGames", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/rps.GameService/getGames", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -94,7 +94,7 @@ func _GameService_CreateGame_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/task2.GameService/createGame",
+		FullMethod: "/rps.GameService/createGame",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GameServiceServer).CreateGame(ctx, req.(*GameRequest))
@@ -112,7 +112,7 @@ func _GameService_GetGames_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/task2.GameService/getGames",
+		FullMethod: "/rps.GameService/getGames",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GameServiceServer).GetGames(ctx, req.(*Void))
@@ -124,7 +124,7 @@ func _GameService_GetGames_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GameService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "task2.GameService",
+	ServiceName: "rps.GameService",
 	HandlerType: (*GameServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -137,5 +137,5 @@ var GameService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/task2.proto",
+	Metadata: "rps.proto",
 }

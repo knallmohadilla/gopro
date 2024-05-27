@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.12.4
-// source: proto/task2.proto
+// source: rps.proto
 
-package task2
+package rps
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -29,7 +29,7 @@ type Void struct {
 func (x *Void) Reset() {
 	*x = Void{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_task2_proto_msgTypes[0]
+		mi := &file_rps_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -42,7 +42,7 @@ func (x *Void) String() string {
 func (*Void) ProtoMessage() {}
 
 func (x *Void) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_task2_proto_msgTypes[0]
+	mi := &file_rps_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *Void) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Void.ProtoReflect.Descriptor instead.
 func (*Void) Descriptor() ([]byte, []int) {
-	return file_proto_task2_proto_rawDescGZIP(), []int{0}
+	return file_rps_proto_rawDescGZIP(), []int{0}
 }
 
 type Game struct {
@@ -70,7 +70,7 @@ type Game struct {
 func (x *Game) Reset() {
 	*x = Game{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_task2_proto_msgTypes[1]
+		mi := &file_rps_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -83,7 +83,7 @@ func (x *Game) String() string {
 func (*Game) ProtoMessage() {}
 
 func (x *Game) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_task2_proto_msgTypes[1]
+	mi := &file_rps_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -96,7 +96,7 @@ func (x *Game) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Game.ProtoReflect.Descriptor instead.
 func (*Game) Descriptor() ([]byte, []int) {
-	return file_proto_task2_proto_rawDescGZIP(), []int{1}
+	return file_rps_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Game) GetId() string {
@@ -124,7 +124,7 @@ type GameRequest struct {
 func (x *GameRequest) Reset() {
 	*x = GameRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_task2_proto_msgTypes[2]
+		mi := &file_rps_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -137,7 +137,7 @@ func (x *GameRequest) String() string {
 func (*GameRequest) ProtoMessage() {}
 
 func (x *GameRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_task2_proto_msgTypes[2]
+	mi := &file_rps_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -150,7 +150,7 @@ func (x *GameRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameRequest.ProtoReflect.Descriptor instead.
 func (*GameRequest) Descriptor() ([]byte, []int) {
-	return file_proto_task2_proto_rawDescGZIP(), []int{2}
+	return file_rps_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GameRequest) GetGame() *Game {
@@ -171,7 +171,7 @@ type GameResponse struct {
 func (x *GameResponse) Reset() {
 	*x = GameResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_task2_proto_msgTypes[3]
+		mi := &file_rps_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -184,7 +184,7 @@ func (x *GameResponse) String() string {
 func (*GameResponse) ProtoMessage() {}
 
 func (x *GameResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_task2_proto_msgTypes[3]
+	mi := &file_rps_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -197,7 +197,7 @@ func (x *GameResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GameResponse.ProtoReflect.Descriptor instead.
 func (*GameResponse) Descriptor() ([]byte, []int) {
-	return file_proto_task2_proto_rawDescGZIP(), []int{3}
+	return file_rps_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GameResponse) GetGame() *Game {
@@ -218,7 +218,7 @@ type GamesResponse struct {
 func (x *GamesResponse) Reset() {
 	*x = GamesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_task2_proto_msgTypes[4]
+		mi := &file_rps_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -231,7 +231,7 @@ func (x *GamesResponse) String() string {
 func (*GamesResponse) ProtoMessage() {}
 
 func (x *GamesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_task2_proto_msgTypes[4]
+	mi := &file_rps_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -244,7 +244,7 @@ func (x *GamesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GamesResponse.ProtoReflect.Descriptor instead.
 func (*GamesResponse) Descriptor() ([]byte, []int) {
-	return file_proto_task2_proto_rawDescGZIP(), []int{4}
+	return file_rps_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *GamesResponse) GetGame() []*Game {
@@ -254,62 +254,61 @@ func (x *GamesResponse) GetGame() []*Game {
 	return nil
 }
 
-var File_proto_task2_proto protoreflect.FileDescriptor
+var File_rps_proto protoreflect.FileDescriptor
 
-var file_proto_task2_proto_rawDesc = []byte{
-	0x0a, 0x11, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x12, 0x05, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x22, 0x06, 0x0a, 0x04, 0x76, 0x6f,
-	0x69, 0x64, 0x22, 0x2a, 0x0a, 0x04, 0x47, 0x61, 0x6d, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
-	0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x2e,
-	0x0a, 0x0b, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a,
-	0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x74, 0x61,
-	0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x22, 0x2f,
-	0x0a, 0x0c, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1f,
-	0x0a, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0b, 0x2e, 0x74,
-	0x61, 0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x22,
-	0x30, 0x0a, 0x0d, 0x47, 0x61, 0x6d, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x1f, 0x0a, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0b,
-	0x2e, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61, 0x6d,
-	0x65, 0x32, 0x77, 0x0a, 0x0b, 0x47, 0x61, 0x6d, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
-	0x12, 0x37, 0x0a, 0x0a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x61, 0x6d, 0x65, 0x12, 0x12,
-	0x2e, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x13, 0x2e, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x2f, 0x0a, 0x08, 0x67, 0x65, 0x74,
-	0x47, 0x61, 0x6d, 0x65, 0x73, 0x12, 0x0b, 0x2e, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x76, 0x6f,
-	0x69, 0x64, 0x1a, 0x14, 0x2e, 0x74, 0x61, 0x73, 0x6b, 0x32, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x73,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a, 0x07, 0x2e, 0x2f,
-	0x74, 0x61, 0x73, 0x6b, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_rps_proto_rawDesc = []byte{
+	0x0a, 0x09, 0x72, 0x70, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x72, 0x70, 0x73,
+	0x22, 0x06, 0x0a, 0x04, 0x76, 0x6f, 0x69, 0x64, 0x22, 0x2a, 0x0a, 0x04, 0x47, 0x61, 0x6d, 0x65,
+	0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64,
+	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
+	0x6e, 0x61, 0x6d, 0x65, 0x22, 0x2c, 0x0a, 0x0b, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x12, 0x1d, 0x0a, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x09, 0x2e, 0x72, 0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61,
+	0x6d, 0x65, 0x22, 0x2d, 0x0a, 0x0c, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x1d, 0x0a, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x09, 0x2e, 0x72, 0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61, 0x6d,
+	0x65, 0x22, 0x2e, 0x0a, 0x0d, 0x47, 0x61, 0x6d, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x1d, 0x0a, 0x04, 0x67, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
+	0x32, 0x09, 0x2e, 0x72, 0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x04, 0x67, 0x61, 0x6d,
+	0x65, 0x32, 0x6f, 0x0a, 0x0b, 0x47, 0x61, 0x6d, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x12, 0x33, 0x0a, 0x0a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x61, 0x6d, 0x65, 0x12, 0x10,
+	0x2e, 0x72, 0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x11, 0x2e, 0x72, 0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x2b, 0x0a, 0x08, 0x67, 0x65, 0x74, 0x47, 0x61, 0x6d, 0x65,
+	0x73, 0x12, 0x09, 0x2e, 0x72, 0x70, 0x73, 0x2e, 0x76, 0x6f, 0x69, 0x64, 0x1a, 0x12, 0x2e, 0x72,
+	0x70, 0x73, 0x2e, 0x47, 0x61, 0x6d, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x72, 0x70, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
-	file_proto_task2_proto_rawDescOnce sync.Once
-	file_proto_task2_proto_rawDescData = file_proto_task2_proto_rawDesc
+	file_rps_proto_rawDescOnce sync.Once
+	file_rps_proto_rawDescData = file_rps_proto_rawDesc
 )
 
-func file_proto_task2_proto_rawDescGZIP() []byte {
-	file_proto_task2_proto_rawDescOnce.Do(func() {
-		file_proto_task2_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_task2_proto_rawDescData)
+func file_rps_proto_rawDescGZIP() []byte {
+	file_rps_proto_rawDescOnce.Do(func() {
+		file_rps_proto_rawDescData = protoimpl.X.CompressGZIP(file_rps_proto_rawDescData)
 	})
-	return file_proto_task2_proto_rawDescData
+	return file_rps_proto_rawDescData
 }
 
-var file_proto_task2_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_proto_task2_proto_goTypes = []interface{}{
-	(*Void)(nil),          // 0: task2.void
-	(*Game)(nil),          // 1: task2.Game
-	(*GameRequest)(nil),   // 2: task2.GameRequest
-	(*GameResponse)(nil),  // 3: task2.GameResponse
-	(*GamesResponse)(nil), // 4: task2.GamesResponse
+var file_rps_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_rps_proto_goTypes = []interface{}{
+	(*Void)(nil),          // 0: rps.void
+	(*Game)(nil),          // 1: rps.Game
+	(*GameRequest)(nil),   // 2: rps.GameRequest
+	(*GameResponse)(nil),  // 3: rps.GameResponse
+	(*GamesResponse)(nil), // 4: rps.GamesResponse
 }
-var file_proto_task2_proto_depIdxs = []int32{
-	1, // 0: task2.GameRequest.game:type_name -> task2.Game
-	1, // 1: task2.GameResponse.game:type_name -> task2.Game
-	1, // 2: task2.GamesResponse.game:type_name -> task2.Game
-	2, // 3: task2.GameService.createGame:input_type -> task2.GameRequest
-	0, // 4: task2.GameService.getGames:input_type -> task2.void
-	3, // 5: task2.GameService.createGame:output_type -> task2.GameResponse
-	4, // 6: task2.GameService.getGames:output_type -> task2.GamesResponse
+var file_rps_proto_depIdxs = []int32{
+	1, // 0: rps.GameRequest.game:type_name -> rps.Game
+	1, // 1: rps.GameResponse.game:type_name -> rps.Game
+	1, // 2: rps.GamesResponse.game:type_name -> rps.Game
+	2, // 3: rps.GameService.createGame:input_type -> rps.GameRequest
+	0, // 4: rps.GameService.getGames:input_type -> rps.void
+	3, // 5: rps.GameService.createGame:output_type -> rps.GameResponse
+	4, // 6: rps.GameService.getGames:output_type -> rps.GamesResponse
 	5, // [5:7] is the sub-list for method output_type
 	3, // [3:5] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -317,13 +316,13 @@ var file_proto_task2_proto_depIdxs = []int32{
 	0, // [0:3] is the sub-list for field type_name
 }
 
-func init() { file_proto_task2_proto_init() }
-func file_proto_task2_proto_init() {
-	if File_proto_task2_proto != nil {
+func init() { file_rps_proto_init() }
+func file_rps_proto_init() {
+	if File_rps_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_proto_task2_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_rps_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Void); i {
 			case 0:
 				return &v.state
@@ -335,7 +334,7 @@ func file_proto_task2_proto_init() {
 				return nil
 			}
 		}
-		file_proto_task2_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_rps_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Game); i {
 			case 0:
 				return &v.state
@@ -347,7 +346,7 @@ func file_proto_task2_proto_init() {
 				return nil
 			}
 		}
-		file_proto_task2_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_rps_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GameRequest); i {
 			case 0:
 				return &v.state
@@ -359,7 +358,7 @@ func file_proto_task2_proto_init() {
 				return nil
 			}
 		}
-		file_proto_task2_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_rps_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GameResponse); i {
 			case 0:
 				return &v.state
@@ -371,7 +370,7 @@ func file_proto_task2_proto_init() {
 				return nil
 			}
 		}
-		file_proto_task2_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_rps_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GamesResponse); i {
 			case 0:
 				return &v.state
@@ -388,18 +387,18 @@ func file_proto_task2_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_proto_task2_proto_rawDesc,
+			RawDescriptor: file_rps_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_task2_proto_goTypes,
-		DependencyIndexes: file_proto_task2_proto_depIdxs,
-		MessageInfos:      file_proto_task2_proto_msgTypes,
+		GoTypes:           file_rps_proto_goTypes,
+		DependencyIndexes: file_rps_proto_depIdxs,
+		MessageInfos:      file_rps_proto_msgTypes,
 	}.Build()
-	File_proto_task2_proto = out.File
-	file_proto_task2_proto_rawDesc = nil
-	file_proto_task2_proto_goTypes = nil
-	file_proto_task2_proto_depIdxs = nil
+	File_rps_proto = out.File
+	file_rps_proto_rawDesc = nil
+	file_rps_proto_goTypes = nil
+	file_rps_proto_depIdxs = nil
 }

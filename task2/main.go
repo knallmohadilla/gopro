@@ -1,4 +1,4 @@
-package main
+package rps
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb "/home/vboxuser/Desktop/projects/gopro/task2/proto"
+	pb "github.com/knallmohadilla/gopro/task2/rps"
 )
 
 var (
