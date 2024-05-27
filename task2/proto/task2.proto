@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package task2;
+
+option go_package = "./task2";
+
+service GameService {
+    rpc createGame(GameRequest) returns (GameResponse) {}
+    rpc getGames(void) returns (GamesResponse) {}
+}
+
+message void {
+
+}
+
+message Game {
+    string id = 1;
+    string name = 2;
+}
+message GameRequest {
+    Game game = 1;
+}
+
+message GameResponse {
+    Game game = 1;
+}
+
+message GamesResponse {
+    repeated Game game = 1;
+}
