@@ -207,7 +207,8 @@ function App() {
         "choiceB":"",
         "winsA":0,
         "winsB":0,
-        "gameFinished":false
+        "gameFinished":false,
+        "currentWinner":""
       }));
     } catch (error) {
       console.log("error");

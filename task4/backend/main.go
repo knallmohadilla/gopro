@@ -21,6 +21,7 @@ type Game struct {
 	WinsA	int `json:"winsA"`
 	WinsB	int `json:"winsB"`
 	GameFinished bool `json:"gameFinished"`
+	CurrentWinner string `json:"currentWinner"`
 }
 
 type GameChoice struct {
@@ -100,16 +101,24 @@ func (c *KVController) setChoice(w http.ResponseWriter, r *http.Request) {
 		if(game.ChoiceA != "" && game.ChoiceB != "" && game.PlayerA != "" && game.PlayerB != ""){
 			if(game.ChoiceA == "rock" && game.ChoiceB == "scissors"){
 				game.WinsA++
+				game.CurrentWinner = game.PlayerA
 			} else if(game.ChoiceA == "scissors" && game.ChoiceB == "paper"){
 				game.WinsA++
+				game.CurrentWinner = game.PlayerA
 			} else if(game.ChoiceA == "paper" && game.ChoiceB == "rock"){
 				game.WinsA++
+				game.CurrentWinner = game.PlayerA
 			} else if(game.ChoiceB == "rock" && game.ChoiceA == "scissors"){
 				game.WinsB++
+				game.CurrentWinner = game.PlayerB
 			} else if(game.ChoiceB == "scissors" && game.ChoiceA == "paper"){
 				game.WinsB++
+				game.CurrentWinner = game.PlayerB
 			} else if(game.ChoiceB == "paper" && game.ChoiceA == "rock"){
 				game.WinsB++
+				game.CurrentWinner = game.PlayerB
+			} else {
+				game.CurrentWinner = "Draw"
 			}
 			game.GameFinished = true;
 		}

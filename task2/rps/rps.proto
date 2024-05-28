@@ -5,8 +5,14 @@ package rps;
 option go_package = "./rps";
 
 service GameService {
-    rpc createGame(GameRequest) returns (GameResponse) {}
+    rpc createGame(CreateGameRequest) returns (NewGameResponse) {}
+    rpc joinGame(JoinGameRequest) returns (GameResponse) {}
     rpc getGames(void) returns (GamesResponse) {}
+}
+
+message Player {
+    string name = 1;
+    string choice = 2;
 }
 
 message void {
@@ -15,10 +21,27 @@ message void {
 
 message Game {
     string id = 1;
-    string name = 2;
+    string playerA = 2;
+	string playerB = 3;
+	string choiceA = 4;
+	string choiceB = 5;
+	int32 WinsA = 6;
+	int32 WinsB = 7;
+	bool GameFinished = 8;
+	string CurrentWinner = 9;
 }
-message GameRequest {
-    Game game = 1;
+
+message GetGameRequest {
+    string id = 1;
+}
+
+message CreateGameRequest {
+    Player player = 1;
+}
+
+message JoinGameRequest {
+    Player player = 2;
+    string gameId = 1;
 }
 
 message GameResponse {
@@ -27,4 +50,8 @@ message GameResponse {
 
 message GamesResponse {
     repeated Game game = 1;
+}
+
+message NewGameResponse {
+    Game game = 1;
 }

@@ -13,7 +13,7 @@ import (
 
 
 var (
-	addr = flag.String("addr", "localhost:50051", "the address to connect to")
+	addr = flag.String("addr", "localhost:50052", "the address to connect to")
 )
 
 func main() {
@@ -29,9 +29,9 @@ func main() {
 	// Contact the server and print out its response.
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.CreateGame(ctx, &pb.GameRequest{Game: &pb.Game{Id: "1", Name: "game1"}})
+	r, err := c.CreateGame(ctx, &pb.CreateGameRequest{Player: &pb.Player{Name: "Player A", Choice: "rock"}})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Greeting: %s", r.GetGame())
+	log.Printf(r.Game.GetId(), r.Game.GetPlayerA())
 }
