@@ -97,7 +97,7 @@ func (c *KVController) setChoice(w http.ResponseWriter, r *http.Request) {
 		} else if (gameChoice.Player != "" && gameChoice.Player == game.PlayerB){
 			game.ChoiceB=gameChoice.GameChoice
 		}
-
+//look at switch
 		if(game.ChoiceA != "" && game.ChoiceB != "" && game.PlayerA != "" && game.PlayerB != ""){
 			if(game.ChoiceA == "rock" && game.ChoiceB == "scissors"){
 				game.WinsA++
@@ -189,6 +189,7 @@ func main() {
 		MUX: mux,
 	}
 
+	// separate business logic, API, Env(config)
 	mux.HandleFunc("POST /choice", kvController.setChoice)
 	mux.HandleFunc("POST /restart", kvController.newExistingGame)
 	mux.HandleFunc("GET /games/{id}", kvController.GetGame)

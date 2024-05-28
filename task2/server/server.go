@@ -22,7 +22,7 @@ type server struct {
 
 
 
-func (s *server) GameService(ctx context.Context, in *pb.CreateGameRequest) (*pb.GameResponse, error) {
+func (s *server) CreateGame(ctx context.Context, in *pb.CreateGameRequest) (*pb.NewGameResponse, error) {
 	log.Printf("Received: %v", in.GetPlayer())
 	gameID := fmt.Sprintf("game-%d", time.Now().Unix())
 	player := in.Player.Name;
@@ -38,7 +38,7 @@ func (s *server) GameService(ctx context.Context, in *pb.CreateGameRequest) (*pb
 		choiceA = ""
 	}
 	
-	return &pb.GameResponse{Game: &pb.Game{
+	return &pb.NewGameResponse{Game: &pb.Game{
 		Id:            gameID,
 		PlayerA:       player,
 		PlayerB:       "",

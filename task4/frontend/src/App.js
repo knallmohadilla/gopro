@@ -163,13 +163,6 @@ function App() {
         let data = await response.json();
         setGames(prev => [...prev.filter(game => game.id !== id), data])
         setUserChoice(choice)
-        if(data.currentWinner === player) {
-          alert("You won, hit restart if you want to play again!")
-        } else if(data.currentWinner === "draw") {
-          alert("It's a draw, hit restart if you want to play again!")
-        } else {
-          alert("You lost, hit restart if you want to play again!")
-        }
       }
     } catch (error) {
       console.log("error");
